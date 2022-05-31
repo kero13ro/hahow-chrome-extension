@@ -4,4 +4,9 @@ button {
   margin: 10px;
   border: none;
   border-radius: 2px;
+  white-space: nowrap;
 }
+
+/* html {
+  width: 100px;
+} */
