@@ -1,0 +1,12 @@
+.video-player {
+  background-color: #000 !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 50px) !important;
+  z-index: 1000;
+}
+
+.video-player>div:first-child {
+  width: 90% !important;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Action API Demo",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Default Title",
+    "default_popup": "popup.html"
+  }
+}
