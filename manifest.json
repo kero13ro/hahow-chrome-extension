@@ -4,6 +4,7 @@
   "manifest_version": 3,
   "permissions": [
     "activeTab",
+    "notifications",
     "scripting"
   ],
   "background": {
@@ -12,5 +13,19 @@
   "action": {
     "default_title": "Default Title",
     "default_popup": "popup.html"
+  },
+  "commands": {
+    "run-toggle": {
+      "suggested_key": {
+        "mac": "Command+J"
+      },
+      "description": "toggle focus mode"
+    },
+    "run-copy": {
+      "suggested_key": {
+        "mac": "Command+K"
+      },
+      "description": "copy subtitle"
+    }
   }
 }

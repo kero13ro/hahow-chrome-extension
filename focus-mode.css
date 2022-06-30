@@ -10,3 +10,20 @@
 .video-player>div:first-child {
   width: 90% !important;
 }
+
+img[src*='https://hahow.in/static/media/floating'] {
+  display: none;
+}
+
+img[src*='https://hahow.in/static/media/floating']+span {
+  display: none;
+}
+
+.intercom-lightweight-app {
+  display: none;
+}
+
+li .list-content {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}

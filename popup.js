@@ -46,7 +46,7 @@ copySub.addEventListener("click", async () => {
 });
 
 const handleCopy = () => {
-  const container = document.getElementById("hh-transcript-vtt-container");
+  const url = document.querySelector("track")?.src;
 
   const copy = (str) => {
     const el = document.createElement("textarea");
@@ -57,13 +57,32 @@ const handleCopy = () => {
     document.body.removeChild(el);
   };
 
-  if (container) {
-    let res = "";
-    const li = container.querySelectorAll("li");
-    li.forEach((ele) => {
-      res += `${ele.textContent}\n`;
-    });
-    copy(res);
-    console.log(res);
+  if (!url) {
+    alert("沒有字幕");
   }
+  fetch(url)
+    .then((response) => response.text())
+    .then((data) => {
+      const aa = data.split("\n\n").map((item) => item.split("\n")[1]);
+      copy(aa);
+      alert("複製成功！");
+    })
+    .catch((err) => {
+      console.log({ err });
+      alert("沒有字幕");
+    });
+  // const container = document.getElementById("hh-transcript-vtt-container");
+
+  // if (container) {
+  //   let res = "";
+  //   const li = container.querySelectorAll("li");
+  //   li.forEach((ele) => {
+  //     res += `${ele.textContent}\n`;
+  //   });
+  //   copy(res);
+  //   console.log(res);
+  //   alert('複製成功！')
+  // } else {
+  //   alert('沒有字幕')
+  // }
 };

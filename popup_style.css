@@ -7,6 +7,7 @@ button {
   white-space: nowrap;
 }
 
-/* html {
-  width: 100px;
-} */
+button.invalid {
+  opacity: 0.3;
+  pointer-events: none;
+}
