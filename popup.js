@@ -1,11 +1,12 @@
 let copySub = document.getElementById("copySub");
 let focusBtn = document.getElementById("focus");
 
-const extensions = "https://hahow.in/courses";
+const extensions = ["https://hahow.in/courses","https://www.udemy.com/"];
+
 
 focusBtn.addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (!tab.url.startsWith(extensions)) {
+  if (!extensions.some(path=>tab.url.startsWith(path))) {
     return;
   }
 
@@ -33,7 +34,8 @@ focusBtn.addEventListener("click", async () => {
 
 copySub.addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (!tab.url.startsWith(extensions)) {
+  
+  if (!extensions.some(path=>tab.url.startsWith(path))) {
     return;
   }
 

@@ -27,3 +27,24 @@ li .list-content {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+
+/* udemy */
+
+div[class*='app--content-column'] {
+  width: 65% !important;
+}
+
+div[class*='app--sidebar-column'] {
+  width: 35% !important;
+  font-size: 24px;
+}
+
+html,
+body {
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+div[class*='.curriculum-item-view--scaled-height-limiter'] {
+  max-height: calc(100vh - 24rem) !important;
+}
